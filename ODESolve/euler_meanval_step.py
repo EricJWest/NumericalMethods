@@ -1,7 +1,7 @@
-# improved euler method
-def euler_improved_step(x, y, f, h):
+# mean-value euler method
+def euler_meanval_step(x, y, f, h):
     """ 
-    Evolve solution by one step using the improved Euler method
+    Evolve solution by one step using the mean-value Euler method
     (a.k.a., second-order Runge-Kutta with a1=1/2, b1=1, c1=1, a2=1/2, b2=1, c2=1)
     
     INPUT:

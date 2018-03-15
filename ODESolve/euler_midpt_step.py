@@ -1,7 +1,7 @@
-# modified euler method
-def euler_modified_step(x, y, f, h):
+# midpt euler method
+def euler_midpt_step(x, y, f, h):
     """ 
-    Evolve solution by one step using the modified Euler method
+    Evolve solution by one step using the midpoint Euler method
     (a.k.a., second-order Runge-Kutta with a1=0, a2=1, b2=1/2, c2=1/2)
     
     INPUT:

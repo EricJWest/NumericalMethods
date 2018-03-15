@@ -1,7 +1,7 @@
-# simple (forward) euler method
+# simple euler method
 def euler_step(x, y, f, h):
     """ 
-    Evolve solution by one step using the simple (forward) Euler method
+    Evolve solution by one step using the simple Euler method
     
     INPUT:
     x = current x position
