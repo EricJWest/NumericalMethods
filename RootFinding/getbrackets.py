@@ -1,4 +1,3 @@
-
 import numpy as np
 
 def get_brackets(f, a, b, n):
