@@ -28,7 +28,7 @@ def secant(f, x0, x1, TOL, imax):
     xOld = x0
     xNew = x1
     
-    # iterate search using bisection method
+    # iterate search using secant method
     i = 1  # reset iteration number
     while i <= imax:
             
@@ -37,13 +37,12 @@ def secant(f, x0, x1, TOL, imax):
         xOld = xNew    # xNew --> xOld
         
         # update approximate location of root
-        fOld = f(xOld)
-        xNew = xOld - fOld*(xOld - xOldOld)/(f(xOld) - f(xOldOld))
+        xNew = xOld - f(xOld)*(xOld - xOldOld)/(f(xOld) - f(xOldOld))
         print('iteration',i,': approximate location of root at',xNew)
     
         # calculate errors
         xErr = np.abs((xNew - xOld)/xNew)
-        fErr = f(xNew)
+        fErr = np.abs(f(xNew))
 
         # check if errors are within the allowed tolerance
         if (xErr <= TOL and fErr <= TOL):
