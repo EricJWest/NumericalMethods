@@ -71,7 +71,6 @@ def bisect(f, a, b, TOL, imax):
             print('Root is located at',best,'+/-',delta)
             return
 
-        # print message if max iteration has been reached
-        if i == imax:
-            print('FAIL! Max number of iterations has been reached. Stopping.')
-            return
+    # print message that max iteration has been reached
+    print('FAIL! Max number of iterations has been reached. Stopping.')
+    return

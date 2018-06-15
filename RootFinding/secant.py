@@ -51,11 +51,10 @@ def secant(f, x0, x1, TOL, imax):
             print('SUCCESS! Root has been located to within the specified tolerance after',i,'iterations.')
             print('Root is located at',best,'+/-',delta)
             return
-
-        # print message if max iteration has been reached
-        if i == imax:
-            print('FAIL! Max number of iterations has been reached. Stopping.')
-            return
         
         # increment iteration number
         i = i + 1
+
+    # print message that max iteration has been reached
+    print('FAIL! Max number of iterations has been reached. Stopping.')
+    return

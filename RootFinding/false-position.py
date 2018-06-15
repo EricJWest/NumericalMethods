@@ -52,11 +52,6 @@ def false_position(f, a, b, TOL, imax):
             print('Root is located at',best,'+/-',delta)
             return
 
-        # print message if max iteration has been reached
-        if i == imax:
-            print('FAIL! Max number of iterations has been reached. Stopping.')
-            return
-
         # determine which subinterval the root lies in, and update end points      
         sgn = np.sign(f(xLeft))*np.sign(f(pNew))
         if sgn <= 0:
@@ -77,3 +72,7 @@ def false_position(f, a, b, TOL, imax):
         
         # rotate approximants
         pOld = pNew
+        
+    # print message that max iteration has been reached
+    print('FAIL! Max number of iterations has been reached. Stopping.')
+    return
